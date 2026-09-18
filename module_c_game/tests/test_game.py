@@ -1,17 +1,18 @@
 # module_c_game/tests/test_game.py
 # Unit tests for Module C (Game) - TC-C1 to TC-C4
 
-from module_c_game.minimax import minimax
-from module_c_game.iterative_deepening import iterative_deepening
-from module_c_game.game_state import START_STATE
-from module_c_game.dock_game import simulate_dock_game
-from module_c_game.alphabeta import alphabeta
 import pytest
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__)))))
+
+from module_c_game.minimax import minimax
+from module_c_game.iterative_deepening import iterative_deepening
+from module_c_game.game_state import START_STATE
+from module_c_game.dock_game import simulate_dock_game
+from module_c_game.alphabeta import alphabeta
 
 
 # ---------------------------------------------------------------------------

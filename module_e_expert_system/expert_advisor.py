@@ -6,14 +6,15 @@
 #   python expert_advisor.py [symptom:fact1 symptom:fact2 ...]
 #   (interactive prompt if no args given)
 
-from module_e_expert_system.rule_engine import diagnose
-from module_e_expert_system.explanation import format_trace
 import os
 import sys
 
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
+
+from module_e_expert_system.rule_engine import diagnose
+from module_e_expert_system.explanation import format_trace
 
 
 def _interactive_facts():

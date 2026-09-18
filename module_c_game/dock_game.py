@@ -5,11 +5,6 @@
 # Usage: python dock_game.py --depth 5 [--opponent random|self]
 
 from __future__ import annotations
-from module_c_game.iterative_deepening import iterative_deepening
-from module_c_game.game_state import (DOCK, MOVE_NAMES, MOVES, START_STATE,
-                                      GameState, apply_move, is_terminal,
-                                      legal_moves)
-from module_c_game.alphabeta import alphabeta
 
 import argparse
 import os
@@ -17,6 +12,12 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from module_c_game.iterative_deepening import iterative_deepening
+from module_c_game.game_state import (DOCK, MOVE_NAMES, MOVES, START_STATE,
+                                      GameState, apply_move, is_terminal,
+                                      legal_moves)
+from module_c_game.alphabeta import alphabeta
 
 
 def _move_name(move):

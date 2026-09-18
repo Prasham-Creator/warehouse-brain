@@ -1,6 +1,13 @@
 # module_b_uncertainty/tests/test_uncertainty.py
 # Unit tests for Module B — all 6 uncertainty methods.
 
+import pytest
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
+
 from module_b_uncertainty.nonmonotonic import (monotonic_verdict,
                                                nonmonotonic_verdict)
 from module_b_uncertainty.fuzzy import fuzzy_score
@@ -8,12 +15,6 @@ from module_b_uncertainty.dempster_shafer import ds_belief_interval
 from module_b_uncertainty.certainty_factors import cf_score
 from module_b_uncertainty.bayesian_network import bn_posterior
 from module_b_uncertainty.bayes import bayes_posterior
-import pytest
-import os
-import sys
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__)))))
 
 
 # ---------------------------------------------------------------------------

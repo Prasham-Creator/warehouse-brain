@@ -1,13 +1,6 @@
 # module_d_connectionist/tests/test_connectionist.py
 # Unit tests for Module D (Connectionist) - TC-D1 to TC-D3
 
-from module_d_connectionist.rnn_model import rnn_predict_anomaly, train_rnn
-from module_d_connectionist.hopfield import (corrupt, generate_pattern_1,
-                                             generate_pattern_2,
-                                             generate_pattern_3,
-                                             generate_pattern_4,
-                                             generate_pattern_5,
-                                             generate_pattern_6, recall, train)
 import pytest
 import numpy as np
 import os
@@ -15,6 +8,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__)))))
+
+from module_d_connectionist.rnn_model import rnn_predict_anomaly, train_rnn
+from module_d_connectionist.hopfield import (corrupt, generate_pattern_1,
+                                             generate_pattern_2,
+                                             generate_pattern_3,
+                                             generate_pattern_4,
+                                             generate_pattern_5,
+                                             generate_pattern_6, recall, train)
 
 
 # ---------------------------------------------------------------------------

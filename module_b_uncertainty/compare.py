@@ -35,6 +35,11 @@
 #   evidence — verify per run output.
 #   Nonmonotonic → Damaged (crack_visible is True).
 
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from module_b_uncertainty.nonmonotonic import (nonmonotonic_verdict,
                                                sensor_reading_to_facts)
 from module_b_uncertainty.fuzzy import fuzzy_score
@@ -42,10 +47,6 @@ from module_b_uncertainty.dempster_shafer import ds_belief_interval
 from module_b_uncertainty.certainty_factors import cf_score
 from module_b_uncertainty.bayesian_network import bn_posterior
 from module_b_uncertainty.bayes import bayes_posterior
-import os
-import sys
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 TEST_CASES = [

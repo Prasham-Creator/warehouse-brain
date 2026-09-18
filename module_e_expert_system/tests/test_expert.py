@@ -1,9 +1,6 @@
 # module_e_expert_system/tests/test_expert.py
 # Unit tests for Module E — TC-E1 through TC-E4.
 
-from module_e_expert_system.rule_engine import diagnose
-from module_e_expert_system.knowledge_acquisition import append_rule
-from module_e_expert_system.explanation import format_trace
 import pytest
 import json
 import os
@@ -12,6 +9,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__)))))
+
+from module_e_expert_system.rule_engine import diagnose
+from module_e_expert_system.knowledge_acquisition import append_rule
+from module_e_expert_system.explanation import format_trace
 
 
 _RULES_PATH = os.path.join(
