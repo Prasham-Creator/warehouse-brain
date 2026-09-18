@@ -5,18 +5,23 @@
 # Prints: the goal-stack plan, step-by-step execution trace,
 #         the nonlinear plan layers, and any [REACTIVE] log lines.
 
-from module_a_planning.state import WorldState, is_goal_satisfied
-from module_a_planning.reactive import execute_with_reactive_layer
-from module_a_planning.nonlinear_planner import plan_nonlinear
-from module_a_planning.goal_stack_planner import plan_goal_stack
 import json
 import os
 import sys
+
+# Ensure standard output can handle Unicode characters on Windows
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Ensure repo root is on sys.path regardless of where the script is invoked from.
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
+
+from module_a_planning.state import WorldState, is_goal_satisfied
+from module_a_planning.reactive import execute_with_reactive_layer
+from module_a_planning.nonlinear_planner import plan_nonlinear
+from module_a_planning.goal_stack_planner import plan_goal_stack
 
 
 def main():
